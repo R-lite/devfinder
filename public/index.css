@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap');
+
+body {
+    margin: 0;
+    background-color: rgb(24, 23, 23);
+    background-color: rgb(20, 28, 47);
+    color: rgb(230, 241, 250);
+    font-family: 'Inconsolata', monospace;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.primary-layout {
+  display: grid;
+}
+
+.aside-pane {
+  height: 100vh;
+  position: fixed;
+  border-right: 1px solid rgb(63, 64, 65);
+}
+
+.logo {
+  margin: 0;
+  padding: .5rem 1.5rem 1.5rem;
+  /* background-color: rgba(193, 224, 255, 0.295);
+  border-radius: .2rem .2rem 50% 50%; */
+}
+
+.aside-navigations {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.aside-navigations li {
+  padding: 1rem 2rem;
+  padding-right: 4rem;
+}
+
+/* .active-aside {
+  background-color: rgba(193, 224, 255, 0.295);
+  border-radius: .2rem .2rem 50% 50%;
+} */
+
+.detail-section {
+  margin-left: 11rem;
+  text-align: center;
+}
+
+.topbar {
+  width: 100%;
+}
+
+#search {
+  width: 70%;
+  height: 2.3rem;
+  border-radius: .2rem;
+  border: none;
+  margin-top: .5rem;
+  background-color: rgb(31, 42, 72);
+}
