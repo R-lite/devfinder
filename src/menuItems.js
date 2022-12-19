@@ -7,14 +7,14 @@ import {
 import {
     IoIosChatboxes,
     IoIosPaper,
-    IoIosDesktop
+    IoIosPerson
 } from 'react-icons/io'
 
 const menuItems = [
     {
         path: "/",
         name: "Overview",
-        icon: <IoIosDesktop />
+        icon: <IoIosPerson />
     },
 
     {
@@ -24,7 +24,7 @@ const menuItems = [
     },
 
     {
-        path: "/github",
+        path: "/github/overview",
         name: "Github",
         icon: <FaGithub />
     },

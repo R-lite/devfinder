@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import SearchBar from './SearchBar';
 import Aside from './Aside';
 import Overview from '../pages/overview';
 import Resume from '../pages/resume';
@@ -17,16 +16,13 @@ function App(){
                     <Routes>
                         <Route path="/overview" element = {<Overview />} />
                         <Route path="/resume" element = {<Resume />} />
-                        <Route path="/github" element = {<Github />} />
+                        <Route path="/github/*" element = {<Github />} />
                         <Route path="/linkedin" element = {<LinkedIn />} />
                         <Route path="/behance" element = {<Behance />} />
                         <Route path="/contact" element = {<Contact />} />
                     </Routes>
                 </Aside>
             </BrowserRouter>
-            <div className='detail-section'>
-                <SearchBar />
-            </div>
         </div>
     )
 }
