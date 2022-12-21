@@ -110,7 +110,7 @@ ul {
   text-align: center;
 }
 
-#search {
+.search {
   width: 70%;
   height: 2.3rem;
   border-radius: .2rem;

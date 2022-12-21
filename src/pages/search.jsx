@@ -5,10 +5,22 @@ function SearchPage(){
     return (
         <div>
             <h1>Search Page </h1>
-            <SearchCard name = 'LinkedIn'/>
-            <SearchCard name = 'Github'/>
-            <SearchCard name = 'Behance'/>
-            <SearchCard name = 'Resume'/>
+            <SearchCard 
+                name = 'LinkedIn'
+                id = 'linkedIn'
+            />
+            <SearchCard 
+                name = 'Github'
+                id = 'github'
+            />
+            <SearchCard 
+                name = 'Behance'
+                id = 'behance'
+            />
+            <SearchCard 
+                name = 'Resume'
+                id = 'resume'
+            />
         </div>
     )
 };
