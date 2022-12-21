@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Aside from './Aside';
-import Overview from '../pages/overview';
+import SearchPage from '../pages/search';
 import Resume from '../pages/resume';
 import Github from '../pages/github';
 import LinkedIn from '../pages/linkedin';
@@ -14,7 +14,7 @@ function App(){
             <BrowserRouter>
                 <Aside>
                     <Routes>
-                        <Route path="/overview" element = {<Overview />} />
+                        <Route path="" element = {<SearchPage />} />
                         <Route path="/resume" element = {<Resume />} />
                         <Route path="/github/*" element = {<Github />} />
                         <Route path="/linkedin" element = {<LinkedIn />} />

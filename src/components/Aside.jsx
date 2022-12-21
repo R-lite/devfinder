@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import menuItems from '../menuItems';
 import { NavLink } from 'react-router-dom';
-import { IoMdSunny, IoMdMoon, IoIosMenu, IoMdShirt } from "react-icons/io";
+import { IoMdSunny, IoMdMoon, IoIosMenu } from "react-icons/io";
 
 
 function Aside({children}){
     const [theme, setTheme] = useState('Bright');
-    const [themeImage, setThemeImage] = useState(<IoMdSunny />);
+    const [themeImage, setThemeImage] = useState(true);
     const [shrinkAside, setShrinkAsideCondition] = useState(false);
     const year = new Date().getFullYear();
 
@@ -16,7 +16,7 @@ function Aside({children}){
 
     const switchTheme = () => {
         setTheme(theme === 'Bright' ? 'Dark': 'Bright')
-        setThemeImage(themeImage === 'IoMdSunny'? <IoMdMoon />: <IoMdSunny />)
+        setThemeImage(!themeImage)
     }
 
     return(
@@ -29,14 +29,14 @@ function Aside({children}){
                 
                 <ul className='aside.navigations'>
                     { menuItems.map((item, index)=>(
-                        <NavLink to={item.path} key={index} className="link" activeClassName="active">
+                        <NavLink to={item.path} key={index} className="link" activeclassname="active">
                             <div className='icon'>{item.icon}</div>
                             <div className='link-text'>{item.name}</div>
                         </NavLink>
                         ))
                     }
                     <div className='theme' style={{height: shrinkAside ? '2rem': 'max-content'}} onClick={switchTheme} >
-                        <div className='icon'>{themeImage}</div>
+                        <div className='icon'>{themeImage ? <IoMdSunny />: <IoMdMoon />}</div>
                         <div className='link-text'>{theme}</div>
                     </div>
                 </ul>
