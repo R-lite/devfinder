@@ -7,20 +7,16 @@ import ResumeQuery from "./resumeQuery";
 function CheckDestinationApiQuery(e){
     const searchSource = e.target.searchQuery.id;
     const searchParameter = e.target.searchQuery.value;
-    e.preventDefault()
+    e.preventDefault();
     switch (searchSource) {
         case "linkedIn":
-            LinkedInApiQuery(searchParameter);
-            break;
+            return (LinkedInApiQuery(searchParameter))
         case "github":
-            GithubApiQuery(searchParameter);
-            break;
+            return (GithubApiQuery(searchParameter))
         case "behance":
-            BehanceApiQuery(searchParameter);
-            break;
+            return (BehanceApiQuery(searchParameter))
         case "resume":
-            ResumeQuery(searchParameter);
-            break
+            return (ResumeQuery(searchParameter))
         default:
             break;
     }

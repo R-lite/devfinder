@@ -106,9 +106,11 @@ ul {
 }
 
 .detail-section {
-  margin-left: 11rem;
+  margin-left: 9rem;
   text-align: center;
 }
+
+/* --------------- Search page style ----------- */
 
 .search {
   width: 70%;
@@ -124,7 +126,11 @@ ul {
   font-family: 'Inconsolata';
 }
 
-/* --------------- Search page style ----------- */
+.page-heading {
+  font-size: 1.8rem;
+  padding: .6rem;
+  font-family: 'Inconsolata';
+}
 
 .search-card {
   padding: 1.4rem;

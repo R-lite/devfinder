@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { IoIosSearch } from 'react-icons/io';
-import CheckDestinationApiQuery from "../../api/checkDestinationApiQuery";
+import CheckDestinationApiQuery from "../api/checkDestinationApiQuery";
+import apiQueryActionContext from "../../context/ApiQueryContext";
 
 function SearchBar(props){
     const [searchValue, setSearchValue] = useState('');
- 
+    const handleSubmit = (e) => {
+        const { status, data } =  CheckDestinationApiQuery(e);
+    }
     return(
-        <form onSubmit={CheckDestinationApiQuery}>
+        <form onSubmit={handleSubmit} >
             <input
                 type="text"
                 name="searchQuery"
@@ -17,7 +20,7 @@ function SearchBar(props){
                 placeholder={`Search ${props.name} profile`}
                 onChange = {(e) => setSearchValue(e.target.value)}
             />
-            <button className="search-button"><IoIosSearch /></button>
+            <button className="search-button" type="sumbit"><IoIosSearch /></button>
         </form>
     )
 }
