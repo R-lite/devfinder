@@ -1,14 +1,14 @@
 import axios from "axios";
 
-function GithubApiQuery(searchParameter){
+async function GithubApiQuery(searchParameter){
   var data = [];
   var status = 'null';
 
-  axios({
+  await axios({
         "method": "GET",
         "url": `https://api.github.com/users/${searchParameter}`,
         "headers": {
-            "content-type": 'application/json'
+            "content-type": "application/octet-stream"
         }
     })
     .then(response => {
@@ -19,8 +19,8 @@ function GithubApiQuery(searchParameter){
         status = 'Failed';
         data = err;
   })
-
-  return{status, data};
+  
+  return({status, data})
 }
 
 export default GithubApiQuery;

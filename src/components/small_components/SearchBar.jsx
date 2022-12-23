@@ -1,13 +1,17 @@
-import React, { useState, useContext } from "react";
+import React, { useContext, useState } from "react";
 import { IoIosSearch } from 'react-icons/io';
 import CheckDestinationApiQuery from "../api/checkDestinationApiQuery";
 import apiQueryActionContext from "../../context/ApiQueryContext";
 
 function SearchBar(props){
     const [searchValue, setSearchValue] = useState('');
-    const handleSubmit = (e) => {
-        const { status, data } =  CheckDestinationApiQuery(e);
+    // const { updateSearchStatus } = useContext(apiQueryActionContext);
+    
+    const handleSubmit = async (e) => {
+        const { status, data } = await CheckDestinationApiQuery(e);
+        console.log(data);
     }
+
     return(
         <form onSubmit={handleSubmit} >
             <input
